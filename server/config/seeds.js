@@ -207,7 +207,7 @@ db.once('open', async () => {
             name: 'Vacuum',
             description:
               'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-            image: 'vacuum.jpg',
+            image: 'Vacuum.jpg',
             category: categories[2]._id,
             price: 75.99,
             quantity: 45
