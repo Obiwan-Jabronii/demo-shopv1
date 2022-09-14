@@ -3,9 +3,10 @@ const  { User, Product, Category } = require('../models');
 
 db.once('open', async () => {
     await Category.deleteMany();
+    console.log(Category)
 
     const categories = await Category.insertMany([
-        { name: 'Food'},
+        {name: 'Food'},
         {name: 'Electronics'},
         {name: 'Household Items'},
         {name: 'Books'},
@@ -213,7 +214,7 @@ db.once('open', async () => {
           },
 
     ]);
-
+    console.log(products)
     console.log('Products seeded');
 
     await User.deleteMany();

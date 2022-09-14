@@ -9,7 +9,7 @@ import { idbPromise } from "../../utils/helpers";
 function ProductList() {
   const [state, dispatch ] = useStoreContext();
   const { currentCategory } = state;
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
+  const {  data } = useQuery(QUERY_PRODUCTS);
 
   useEffect(() => {
     if (data) {
@@ -27,6 +27,7 @@ function ProductList() {
 
   function filterProducts() {
     if (!currentCategory) {
+      console.log(state.products)
       return state.products;
     }
 

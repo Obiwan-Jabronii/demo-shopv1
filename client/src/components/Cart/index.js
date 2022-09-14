@@ -37,15 +37,6 @@ const Cart = () => {
     function toggleCart() {
         dispatch({ type: TOGGLE_CART});
     }
-
-    function calculateTotal() {
-        let sum = 0;
-        state.cart.forEach(item => {
-            sum += item.price * item.purchaseQuantity;
-        });
-        return sum.toFixed(2);
-    }
-
     if (!state.cartOpen) {
         return (
             <div className='cart-closed' onClick={toggleCart}>
